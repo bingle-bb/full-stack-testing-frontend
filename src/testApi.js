@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create axios instance with base URL
 const testApi = axios.create({
-  baseURL: "https://fullstack-testing-backend.onrender.com", // your deployed backend
+  baseURL: "https://fullstack-testing-backend.onrender.com +/api", // your deployed backend
 });
 
 // Example: optional request interceptor (no auth needed now)
