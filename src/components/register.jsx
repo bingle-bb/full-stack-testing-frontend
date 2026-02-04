@@ -8,7 +8,7 @@ export default function Register() {
 
   const handleRegister = async () => {
     try {
-      const res = await testApi.post("/api/register", { username, password });
+      const res = await testApi.post("/register", { username, password });
       setMsg("Registered successfully!");
       setUsername("");
       setPassword("");

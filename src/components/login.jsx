@@ -8,7 +8,7 @@ export default function Login() {
 
   const handleLogin = async () => {
     try {
-      const res = await testApi.post("/api/login", { username, password });
+      const res = await testApi.post("/login", { username, password });
       // optionally save token
       localStorage.setItem("user", JSON.stringify(res.data));
       setMsg("Login successful!");
