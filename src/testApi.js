@@ -1,13 +1,12 @@
 import axios from "axios";
 
-// Create axios instance with base URL
+// Create axios instance with base URL pointing to backend
 const testApi = axios.create({
-  baseURL: "https://fullstack-testing-backend.onrender.com/api", // your deployed backend
+  baseURL: "https://fullstack-testing-backend.onrender.com/api", // <-- NO +, NO %20
 });
 
-// Example: optional request interceptor (no auth needed now)
+// Optional: future auth
 testApi.interceptors.request.use((config) => {
-  // For future: if you add auth
   // const user = JSON.parse(localStorage.getItem("user"));
   // if (user?.accessToken) {
   //   config.headers.Authorization = `Bearer ${user.accessToken}`;
