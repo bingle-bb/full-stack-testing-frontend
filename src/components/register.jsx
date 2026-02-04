@@ -1,5 +1,5 @@
 import { useState } from "react";
-import testApi from "../testApi";
+import testApi from "./testApi";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -8,6 +8,7 @@ export default function Register() {
 
   const handleRegister = async () => {
     try {
+      // Only /register because baseURL already includes /api
       const res = await testApi.post("/register", { username, password });
       setMsg("Registered successfully!");
       setUsername("");
@@ -19,7 +20,7 @@ export default function Register() {
   };
 
   return (
-    <div style={{ padding: "20px", border: "1px solid #ccc", margin: "10px" }}>
+    <div>
       <h2>Register</h2>
       <input
         placeholder="Username"
